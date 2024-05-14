@@ -1,38 +1,48 @@
-Certainly! Here's a README.md file for setting up EKS with Terraform and installing the AWS CLI on Windows:
 
 
 # EKS Setup with Terraform
 
-## Installing AWS CLI
 
-### Prerequisites
-- Supported versions of 64-bit Windows
-- Admin rights to install software
+The script installs terraform, awscli and kubectl on ubuntu
+Provide the executable permission to script.sh file, and run it if you are on Ubuntu.
 
-### Install or Update AWS CLI
-1. **Download the AWS CLI MSI installer for Windows (64-bit):**
-   - [AWSCLIV2.msi](https://awscli.amazonaws.com/AWSCLIV2.msi)
+```
+sudo chmod +x script.sh
+./script.sh
+```
+This script will install Terraform, AWS cli, Kubectl.
 
-2. **Run the installer using `msiexec`:**
-   ```
-   C:\> msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
-   ```
+Check versions
 
-   For a silent installation, use the `/qn` flag:
-   ```
-   C:\> msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi /qn
-   ```
+```
+aws --version
+kubectl version --client
+terraform --version
+```
+Run Terraform init
 
-3. **Confirm the installation:**
-   Open the Start menu, search for `cmd` to open a command prompt window, and run:
-   ```
-   C:\> aws --version
-   ```
+NOTE: Don’t forgot to change the s3 bucket name in the backend.tf file. For testing purposes you cantake out the backend.tf to store statefiles locally(not advisable anyway)
 
-   You should see output similar to:
-   ```
-   aws-cli/2.15.30 Python/3.11.6 Windows/10 exe/AMD64 prompt/off
-   ```
 
-4. **Troubleshooting:**
-   If Windows can't find the program, try closing and reopening the command prompt window to refresh the path. For additional troubleshooting, refer to the [Troubleshoot AWS CLI errors](https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-troubleshooting.html) guide.
+```
+terraform init
+```
+Now run terraform validate and terraform plan
+
+```
+terraform validate
+terraform plan
+```
+Now Run terraform apply to provision cluster.
+
+```
+terraform apply --auto-approve
+```
+Update the Kubernetes configuration
+
+Make sure to change your desired region
+Note: If you change the cluster name in the main.tf, remember to make the change in this command from "--name EKS_CLOUD" to your preferred "--name <preferred clustername>"
+
+```
+aws eks update-kubeconfig --name EKS_CLOUD --region us-east-2
+```
