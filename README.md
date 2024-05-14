@@ -21,14 +21,14 @@ sudo chmod +x script.sh
 ```
 This script will install Terraform, AWS cli, Kubectl.
 
-Check versions
+# Check versions
 
 ```
 aws --version
 kubectl version --client
 terraform --version
 ```
-Run Terraform init
+# Run Terraform init to initialize
 
 NOTE: Don’t forgot to change the s3 bucket name in the backend.tf file. For testing purposes you cantake out the backend.tf to store statefiles locally(not advisable anyway)
 
@@ -47,7 +47,7 @@ Now Run terraform apply to provision cluster.
 ```
 terraform apply --auto-approve
 ```
-Update the Kubernetes configuration
+# Update the Kubernetes configuration
 
 Make sure to change your desired region
 Note: If you change the cluster name in the main.tf, remember to make the change in this command from "--name EKS_CLOUD" to your preferred "--name <preferred clustername>"
