@@ -1,6 +1,6 @@
 # EKS Setup with Terraform
 
-This Installation assumes you have the prerequisites installed, if not there is a bash script for that for Ubuntu users.
+This Installation assumes you have the prerequisites installed, if not there is a bash script for that for Ubuntu users. <br><br>
 Prerequisites:
 ```
 Terraform 
