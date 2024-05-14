@@ -55,3 +55,9 @@ Note: If you change the cluster name in the main.tf, remember to make the change
 ```
 aws eks update-kubeconfig --name EKS_CLOUD --region us-east-2
 ```
+
+#Take down cluster
+When done with your infrastructure, run terraform destroy to take it down.
+```
+terraform destroy --auto-approve
+```
