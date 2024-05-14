@@ -1,7 +1,16 @@
-
+Prerequisites:
+Terraform 
+AWS CLI and 
+KUBECTL 
 
 # EKS Setup with Terraform
 
+Prerequisites:
+```
+Terraform 
+AWS CLI and 
+KUBECTL 
+```
 
 The script installs terraform, awscli and kubectl on ubuntu
 Provide the executable permission to script.sh file, and run it if you are on Ubuntu.
