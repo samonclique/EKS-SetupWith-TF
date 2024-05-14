@@ -1,10 +1,6 @@
-Prerequisites:
-Terraform 
-AWS CLI and 
-KUBECTL 
-
 # EKS Setup with Terraform
 
+This Installation assumes you have the prerequisites installed, if not there is a bash script for that for Ubuntu users.
 Prerequisites:
 ```
 Terraform 
