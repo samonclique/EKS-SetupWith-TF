@@ -30,7 +30,8 @@ terraform --version
 ```
 # Run Terraform init to initialize
 
-NOTE: Don’t forgot to change the s3 bucket name in the backend.tf file. For testing purposes you cantake out the backend.tf to store statefiles locally(not advisable anyway)
+NOTE: Don’t forgot to change the s3 bucket name in the backend.tf file to your bucket name. <br>
+For testing purposes you cantake out the backend.tf to store statefiles locally(not advisable anyway)
 
 
 ```
