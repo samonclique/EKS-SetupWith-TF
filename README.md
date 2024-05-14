@@ -51,7 +51,7 @@ terraform apply --auto-approve
 # Update the Kubernetes configuration
 
 Make sure to change your desired region <br>
-Note: If you change the cluster name in the main.tf, remember to make the change in this command from "--name EKS_CLOUD" to your preferred "--name <preferred-clustername>"
+Note: If you change the cluster name in the main.tf, remember to make the change in this command from "--name EKS_CLOUD" to your preferred "--name preferred-clustername"
 
 ```
 aws eks update-kubeconfig --name EKS_CLOUD --region us-east-2
