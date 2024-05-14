@@ -1,6 +1,6 @@
 Certainly! Here's a README.md file for setting up EKS with Terraform and installing the AWS CLI on Windows:
 
-```markdown
+
 # EKS Setup with Terraform
 
 ## Installing AWS CLI
@@ -36,5 +36,3 @@ Certainly! Here's a README.md file for setting up EKS with Terraform and install
 
 4. **Troubleshooting:**
    If Windows can't find the program, try closing and reopening the command prompt window to refresh the path. For additional troubleshooting, refer to the [Troubleshoot AWS CLI errors](https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-troubleshooting.html) guide.
-```
-Feel free to customize this README as needed for your specific project. Let me know if you have any other questions! 😊
