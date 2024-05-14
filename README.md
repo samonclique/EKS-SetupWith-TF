@@ -12,8 +12,8 @@ AWS CLI and
 KUBECTL 
 ```
 
-The script installs terraform, awscli and kubectl on ubuntu
-Provide the executable permission to script.sh file, and run it if you are on Ubuntu.
+# The script installs terraform, awscli and kubectl on ubuntu.
+Provide the executable permission to script.sh file, and run it if you are on Ubuntu or you have wsl installed on windows.
 
 ```
 sudo chmod +x script.sh
