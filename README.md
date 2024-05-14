@@ -31,7 +31,7 @@ terraform --version
 # Run Terraform init to initialize
 
 NOTE: Don’t forgot to change the s3 bucket name in the backend.tf file to your bucket name. <br>
-For testing purposes you cantake out the backend.tf to store statefiles locally(not advisable anyway)
+For testing purposes you can take out the backend.tf to store statefiles locally(not advisable anyway)
 
 
 ```
@@ -50,7 +50,7 @@ terraform apply --auto-approve
 ```
 # Update the Kubernetes configuration
 
-Make sure to change your desired region
+Make sure to change your desired region <br>
 Note: If you change the cluster name in the main.tf, remember to make the change in this command from "--name EKS_CLOUD" to your preferred "--name <preferred clustername>"
 
 ```
