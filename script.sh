@@ -18,5 +18,4 @@ sudo apt-get install unzip -y
 unzip awscliv2.zip
 sudo ./aws/install
 
-echo "Installation completed successfully."
 
